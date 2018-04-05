@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">March Madness Quiz</string>
+    <string name="title">Welcome to \nMarch Madness!\nthe Quiz!</string>
+    <string name="question1">Q1) The first NCAA Men’s Basketball Tournament was held in:</string>
+    <string name="q1_answer_A">1954</string>
+    <string name="q1_answer_B">1939</string>
+    <string name="q1_answer_C">1948</string>
+    <string name="q1_answer_D">1950</string>
+    <string name="question2">Q2) Which school is the only one to win both the men’s and women’s national championships in the same year?</string>
+    <string name="q2_answer_A">UCLA</string>
+    <string name="q2_answer_B">Duke</string>
+    <string name="q2_answer_C">UConn</string>
+    <string name="q2_answer_D">Baylor</string>
+    <string name="question3">Q3) What city has hosted the most Final Fours to date?</string>
+    <string name="q3_answer">Q3 Answer</string>
+    <string name="question4">Q4) True or False: A 16 seed has never beaten a 1 seed</string>
+    <string name="q4_answer_A">True</string>
+    <string name="q4_answer_B">False</string>
+    <string name="question5">Q5) Not counting the play-in games, the March Madness bracket consists of _____ teams</string>
+    <string name="q5_answer_A">64</string>
+    <string name="q5_answer_B">68</string>
+    <string name="q5_answer_C">32</string>
+    <string name="q5_answer_D">60</string>
+    <string name="question6">Q6) ________ (player’s name) holds the record for most points in a single tournament.</string>
+    <string name="q6_answer">Q6 Answer</string>
+    <string name="question7">Q7) What year did all four number 1 seeds advance to the Final Four?</string>
+    <string name="q7_answer_A">2004</string>
+    <string name="q7_answer_B">2010</string>
+    <string name="q7_answer_C">2008</string>
+    <string name="q7_answer_D">2015</string>
+    <string name="question8">Q8) Since 1986 the national champion gets to keep/is given what item(s) from the final game?</string>
+    <string name="q8_answer_A">The nets</string>
+    <string name="q8_answer_B">Chairs</string>
+    <string name="q8_answer_C">The hardwood (playing surface)</string>
+    <string name="q8_answer_D">The basketball hoops</string>
+    <string name="submit_button">Submit</string>
+    <string name="reset_button">Reset</string>
+
+</resources>
