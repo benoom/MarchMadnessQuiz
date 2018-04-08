@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //A toast is displayed at the bottom of the screen to let the user know how many answers were correct
-        Toast toast = Toast.makeText(this, "You got " + answerTally + " out of 8, Congratulations!", Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(this, getResources().getString(R.string.toast) + " " + answerTally + " " + getResources().getString(R.string.toast2), Toast.LENGTH_LONG);
         toast.show();
         answerTally = 0;
     }
