@@ -1,12 +1,12 @@
 package com.example.android.marchmadnessquiz;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,17 +14,43 @@ public class MainActivity extends AppCompatActivity {
     //setting the initial value of the correct answer tally to 0
     int answerTally = 0;
 
+    //Creating global instance variables for each question's answer
+    private RadioButton radioButtonQ1;
+    private RadioButton radioButtonQ2;
+    private EditText editTextQ3;
+    private RadioButton radioButtonQ4;
+    private RadioButton radioButtonQ5;
+    private EditText editTextQ6;
+    private RadioButton radioButtonQ7;
+    private CheckBox checkBoxQ8A;
+    private CheckBox checkBoxQ8B;
+    private CheckBox checkBoxQ8C;
+    private CheckBox checkBoxQ8D;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //initializing global instance variables for each question's answer
+        radioButtonQ1 = findViewById(R.id.q1_answer_B);
+        radioButtonQ2 = findViewById(R.id.q2_answer_C);
+        editTextQ3 = findViewById(R.id.q3_answer);
+        radioButtonQ4 = findViewById(R.id.q4_answer_B);
+        radioButtonQ5 = findViewById(R.id.q5_answer_A);
+        editTextQ6 = findViewById(R.id.q6_answer);
+        radioButtonQ7 = findViewById(R.id.q7_answer_C);
+        checkBoxQ8A = findViewById(R.id.q8_answer_A);
+        checkBoxQ8B = findViewById(R.id.q8_answer_B);
+        checkBoxQ8C = findViewById(R.id.q8_answer_C);
+        checkBoxQ8D = findViewById(R.id.q8_answer_D);
+
     }
 
     //method for handling when the user clicks the Submit button
     public void submitButton(View view) {
 
         //checking the correct answer is marked for question No. 1, add 1 to tally if correct
-        RadioButton radioButtonQ1 = findViewById(R.id.q1_answer_B);
         boolean q1Answer = radioButtonQ1.isChecked();
 
         if (q1Answer) {
@@ -32,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //checking the correct answer is marked for question No.2, add 1 to tally if correct
-        RadioButton radioButtonQ2 = findViewById(R.id.q2_answer_C);
         boolean q2Answer = radioButtonQ2.isChecked();
 
         if (q2Answer) {
@@ -40,13 +65,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Checking the correct answer is entered for question No. 3, add 1 to tally if correct
-        EditText editTextQ3 = findViewById(R.id.q3_answer);
         if (editTextQ3.getText().toString().equals("Kansas City")) {
             answerTally++;
         }
 
         //Checking the correct answer is marked for question No. 4, add 1 to tally if correct
-        RadioButton radioButtonQ4 = findViewById(R.id.q4_answer_B);
         boolean q4Answer = radioButtonQ4.isChecked();
 
         if (q4Answer) {
@@ -54,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Checking the correct answer is marked for question No. 5, add 1 to tally if correct
-        RadioButton radioButtonQ5 = findViewById(R.id.q5_answer_A);
         boolean q5Answer = radioButtonQ5.isChecked();
 
         if (q5Answer) {
@@ -62,32 +84,24 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Checking the correct answer is marked for question No. 6, add 1 to tally if correct
-        EditText editTextQ6 = findViewById(R.id.q6_answer);
         if (editTextQ6.getText().toString().equals("Glen Rice")) {
             answerTally++;
         }
 
         //Checking the correct answer is marked for question No. 7, add 1 to tally if correct
-        RadioButton radioButtonQ7 = findViewById(R.id.q7_answer_C);
         boolean q7Answer = radioButtonQ7.isChecked();
 
         if (q7Answer) {
             answerTally++;
         }
-        //Log.i("MyActivity", "should be true " + q7Answer);
-
 
         //Checking the correct answer is marked for question No. 8, add 1 to tally if A&C selected
-        CheckBox checkBoxQ8A = findViewById(R.id.q8_answer_A);
         boolean q8AnswerA = checkBoxQ8A.isChecked();
 
-        CheckBox checkBoxQ8C = findViewById(R.id.q8_answer_C);
-        boolean q8AnswerC = checkBoxQ8C.isChecked();
-
-        CheckBox checkBoxQ8B = findViewById(R.id.q8_answer_B);
         boolean q8WrongAnswerB = checkBoxQ8B.isChecked();
 
-        CheckBox checkBoxQ8D = findViewById(R.id.q8_answer_D);
+        boolean q8AnswerC = checkBoxQ8C.isChecked();
+
         boolean q8WrongAnswerD = checkBoxQ8D.isChecked();
 
         if (q8AnswerA && q8AnswerC) {
@@ -107,44 +121,8 @@ public class MainActivity extends AppCompatActivity {
 
     //Resetting the selections in the quiz when the Reset button is clicked
     public void resetButton(View view) {
-        RadioGroup q1RadioGroup = findViewById(R.id.q1_RadioGroup);
-        q1RadioGroup.clearCheck();
-
-        RadioGroup q2RadioGroup = findViewById(R.id.q2_RadioGroup);
-        q2RadioGroup.clearCheck();
-
-        EditText q3EditText = findViewById(R.id.q3_answer);
-        q3EditText.getText().clear();
-
-        RadioGroup q4RadioGroup = findViewById(R.id.q4_RadioGroup);
-        q4RadioGroup.clearCheck();
-
-        RadioGroup q5RadioGroup = findViewById(R.id.q5_RadioGroup);
-        q5RadioGroup.clearCheck();
-
-        EditText q6EditText = findViewById(R.id.q6_answer);
-        q6EditText.getText().clear();
-
-        RadioGroup q7RadioGroup = findViewById(R.id.q7_RadioGroup);
-        q7RadioGroup.clearCheck();
-
-        CheckBox q8AnswerA = findViewById(R.id.q8_answer_A);
-        if (q8AnswerA.isChecked()) {
-            q8AnswerA.setChecked(false);
-        }
-        CheckBox q8AnswerB = findViewById(R.id.q8_answer_B);
-        if (q8AnswerB.isChecked()) {
-            q8AnswerB.setChecked(false);
-        }
-
-        CheckBox q8AnswerC = findViewById(R.id.q8_answer_C);
-        if (q8AnswerC.isChecked()) {
-            q8AnswerC.setChecked(false);
-        }
-
-        CheckBox q8AnswerD = findViewById(R.id.q8_answer_D);
-        if (q8AnswerD.isChecked()) {
-            q8AnswerD.setChecked(false);
-        }
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 }

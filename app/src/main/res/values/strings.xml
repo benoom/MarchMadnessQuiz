@@ -35,5 +35,6 @@
     <string name="q8_answer_D">The basketball hoops</string>
     <string name="submit_button">Submit</string>
     <string name="reset_button">Reset</string>
+    <string name="toast">"You got " + answerTally + " out of 8, Congratulations!"</string>
 
 </resources>
