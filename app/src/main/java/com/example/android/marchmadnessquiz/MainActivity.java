@@ -11,8 +11,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    //setting the initial value of the correct answer tally to 0
-    int answerTally = 0;
+    //Creating the global scoring variable
+    private int answerTally;
 
     //Creating global instance variables for each question's answer
     private RadioButton radioButtonQ1;
