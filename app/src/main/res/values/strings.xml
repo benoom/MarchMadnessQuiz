@@ -70,9 +70,11 @@
     <string name="submit_button">Submit</string>
     <!-- Text for reset button -->
     <string name="reset_button">Reset</string>
-    <!-- First part of toast message for number of correct answers -->
+    <!-- Perfect score toast message -->
+    <string name="perfect_score_toast">8 out of 8, a perfect score!</string>
+    <!-- First part of regular toast message for number of correct answers -->
     <string name="toast">You got </string>
-    <!-- Second part of toast message for number of correct answers -->
+    <!-- Second part of regular toast message for number of correct answers -->
     <string name="toast2"> out of 8, Congratulations!</string>
 
 </resources>

@@ -114,8 +114,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //A toast is displayed at the bottom of the screen to let the user know how many answers were correct
-        Toast toast = Toast.makeText(this, getResources().getString(R.string.toast) + " " + answerTally + " " + getResources().getString(R.string.toast2), Toast.LENGTH_LONG);
-        toast.show();
+        if (answerTally == 8) {
+            Toast toast = Toast.makeText(this, getResources().getString(R.string.perfect_score_toast), Toast.LENGTH_LONG);
+            toast.show();
+        } else {
+            Toast toast = Toast.makeText(this, getResources().getString(R.string.toast) + " " + answerTally + " " + getResources().getString(R.string.toast2), Toast.LENGTH_LONG);
+            toast.show();
+        }
         answerTally = 0;
     }
 
